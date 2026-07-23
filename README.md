@@ -27,3 +27,24 @@ Management needed a single source of truth to answer:
 | DimCity | Geography (city, state, territory) | ~13,000 |
 | DimDate | Calendar table (calendar + fiscal) | 1,460 |
 
+**Model:** star schema, single-direction one-to-many relationships from each dimension to FactSale via surrogate keys.
+**Data cleaning (Power Query):**
+- Removed malformed header rows from DimCustomer and DimStockItem
+- Removed the null placeholder row (Stock Item Key 0) with no valid attributes
+- Investigated FactSale rows with Customer Key 0 — confirmed these are **legitimate transactions with no customer identification captured**, not broken joins
+---
+
+## 4. KPIs measured
+| KPI | Definition |
+|---|---|
+| Total Revenue | Sum of Total Excluding Tax (net of sales tax — see methodology note) |
+| Total Profit | Sum of Profit |
+| Profit Margin % | Profit ÷ Revenue |
+| Revenue / Profit YoY % | Same-period comparison vs. prior year |
+| Revenue / Profit MoM % | Month-over-month comparison |
+| Average Order Value (AOV) | Revenue per distinct invoice (order-level, not line-item-level) |
+| Average Profit per Order | Profit per distinct invoice |
+| Average Deal Size per Salesperson | Order-level revenue average, calculated per rep |
+| % of Total Volume / Profit by Product | Product's share of company-wide quantity or profit |
+| Average Delivery Time | Days between invoice date and delivery date |
+
