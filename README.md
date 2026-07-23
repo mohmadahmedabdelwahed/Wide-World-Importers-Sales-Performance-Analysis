@@ -41,10 +41,9 @@ Management needed a single source of truth to answer:
 | Total Profit | Sum of Profit |
 | Profit Margin % | Profit ÷ Revenue |
 | Revenue / Profit YoY % | Same-period comparison vs. prior year |
-| Revenue / Profit MoM % | Month-over-month comparison |
-| Average Order Value (AOV) | Revenue per distinct invoice (order-level, not line-item-level) |
+| Average Order Value (AOV) | Revenue per distinct invoice |
 | Average Profit per Order | Profit per distinct invoice |
 | Average Deal Size per Salesperson | Order-level revenue average, calculated per rep |
-| % of Total Volume / Profit by Product | Product's share of company-wide quantity or profit |
+| % of Total Volume by Product | Product's share of company-wide quantity |
 | Average Delivery Time | Days between invoice date and delivery date |
 
