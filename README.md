@@ -64,10 +64,20 @@ Management wanted a clear view of the business and answers to questions such as:
 - Although costs also decreased in 2016, they did not fall enough to fully offset the revenue decline, leading to a slight margin reduction.
 - This suggests that most costs move with revenue, but some expenses may not scale down efficiently and should be investigated further.
 
+![Image Alt](hhttps://github.com/mohmadahmedabdelwahed/Wide-World-Importers-Sales-Performance-Analysis/blob/main/Pictures/2.%20KPIs.png)
+
+![Image Alt](https://github.com/mohmadahmedabdelwahed/Wide-World-Importers-Sales-Performance-Analysis/blob/main/Pictures/3.%20Over%20time.png)
+
+![Image Alt](https://github.com/mohmadahmedabdelwahed/Wide-World-Importers-Sales-Performance-Analysis/blob/main/Pictures/4.%20Profit%20%25.png)
+
 **Product performance**
 - Four Halloween Zombie Mask products generated high sales volume but had negative profit margins (-5.56%), indicating potential pricing or cost issues.
 - Animal Big Feet Slippers (Size M) had a very high profit margin (75%) but low sales volume (rank 188), making it a strong candidate for additional marketing.
 - Profit contribution is spread across many products, reducing dependence on a single product line.
+
+![Image Alt](https://github.com/mohmadahmedabdelwahed/Wide-World-Importers-Sales-Performance-Analysis/blob/main/Pictures/5.%20Products.png)
+
+![Image Alt](https://github.com/mohmadahmedabdelwahed/Wide-World-Importers-Sales-Performance-Analysis/blob/main/Pictures/6.%20Products%20Profit.png)
 
 **Sales team performance**
 - The salesperson with the highest revenue generated one of the lowest profit margins.
@@ -75,11 +85,15 @@ Management wanted a clear view of the business and answers to questions such as:
 
 This suggests some sales growth may be driven by heavy discounting rather than profitable deals.
 
+![Image Alt](https://github.com/mohmadahmedabdelwahed/Wide-World-Importers-Sales-Performance-Analysis/blob/main/Pictures/8.%20Sales%20team.png)
+
 **Customer data quality finding**
 - Around 34% of total revenue came from transactions linked to unknown customers.
 - Analysis confirmed these transactions were legitimate sales with complete order information, but customer details were not captured.
 
 This points to a process issue rather than a reporting issue and highlights an opportunity to improve customer data collection.
+
+![Image Alt](https://github.com/mohmadahmedabdelwahed/Wide-World-Importers-Sales-Performance-Analysis/blob/main/Pictures/7.%20Customers.png)
 
 - Only 13 transactions (0.05% of records) were missing delivery dates.
 - These were likely orders created near the end of the dataset period and had not yet been shipped.
@@ -89,11 +103,15 @@ This points to a process issue rather than a reporting issue and highlights an o
 - California generated the highest revenue and profit.
 - Hawaii recorded the lowest revenue and profit.
 
+![Image Alt](https://github.com/mohmadahmedabdelwahed/Wide-World-Importers-Sales-Performance-Analysis/blob/main/Pictures/9.%20Location.png)
+
 **Chilled items Analysis**
 - Total number of invoices is 8k
 - Chilled items contributed approximately $129K in sales, representing only 0.6% of total sales.
 - Taj Shand had the highest share of chilled item sales at 0.9%.
 - California recorded the highest chilled-item sales ($50,786), while Hawaii recorded the lowest ($1,436).
+
+![Image Alt](https://github.com/mohmadahmedabdelwahed/Wide-World-Importers-Sales-Performance-Analysis/blob/main/Pictures/10.%20Chiller%20%20items.png)
 
 **Note**
 
