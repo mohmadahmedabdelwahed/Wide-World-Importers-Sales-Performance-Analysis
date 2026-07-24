@@ -3,20 +3,31 @@
 ---
 
 ## 1. Project overview
-### A end-to-end Power BI analysis of Wide World Importers' sales data (2013–2016), built to answer a core business question: **is the company growing profitably, or is revenue growth masking margin erosion?**
-### The project covers data modeling from raw star-schema tables, Power Query cleaning, DAX measure design, and a 9-page interactive report spanning company performance, product profitability, customer concentration, sales team accountability, and geographic performance.
+### This project is an end-to-end sales analysis of the Wide World Importers dataset (2013–2016) using Power BI.
+The main goal was to answer an important business question:
+Is the company growing in a healthy and profitable way, or is revenue increasing while profit margins are shrinking?
+
+The project includes:
+
+- Data cleaning using Power Query
+- Building a star schema data model
+- Creating DAX measures and KPIs
+- Designing a 9-page interactive dashboard
+
+The analysis covers overall business performance, product profitability, customer behavior, sales team performance, and geographic trends.
 ---
 
 ## 2. Business problem
-Management needed a single source of truth to answer:
-- Is revenue growth translating into profit growth, or is margin quietly eroding?
-- Which products, customers, and regions actually drive profitability — not just volume?
-- Are sales reps being rewarded for revenue at the expense of margin?
-- Where is the company overexposed to concentration risk (one customer, one product, one region)?
+Management wanted a clear view of the business and answers to questions such as:
+
+- Is revenue growth leading to higher profits?
+- Which products, customers, and regions generate the most profit?
+- Are sales representatives focusing on revenue at the expense of profitability?
+- Is the business relying too heavily on a small number of products, customers, or locations?
 ---
 
 ## 3. Data source & model
-**Source:** Wide World Importers sample star schema (Microsoft sample dataset)
+**Source:** Wide World Importers Sample Dataset (Microsoft)
 | Table | Role | Rows (approx.) |
 |---|---|---|
 | FactSale | Fact table — line-item sales transactions | ~26,000 |
@@ -28,9 +39,9 @@ Management needed a single source of truth to answer:
 
 **Model:** star schema, single-direction one-to-many relationships from each dimension to FactSale via surrogate keys.
 **Data cleaning (Power Query):**
-- Removed malformed header rows from DimCustomer and DimStockItem
+- Removed invalid header rows from DimCustomer and DimStockItem
 - Removed the null placeholder row (Stock Item Key 0) with no valid attributes
-- Investigated FactSale rows with Customer Key 0 — confirmed these are **legitimate transactions with no customer identification captured**, not broken joins
+- Investigated sales records linked to Customer Key 0 and confirmed they were valid transactions with missing customer details rather than data model issues.
 ---
 
 ## 4. KPIs measured
@@ -47,47 +58,60 @@ Management needed a single source of truth to answer:
 ---
 ## 5. Key insights
 **Profitability trend**
-- 2015 was the peak year for both revenue ($3.2M) and profit ($6.3M)
-- 2014 showed Profit increasing while margin declined — a warning sign later corrected in 2015–2016
-- Revenue grew steadily in 2014-2015 before contracting -9.48% in 2016 — the first decline in the dataset. Margin eroded in 2014 (cost growth outpaced revenue growth), stabilized in 2015, then eroded again modestly in 2016 (-0.44pts) as cost reduction (-9.06%) nearly but not fully matched the revenue decline. This suggests the cost base is largely variable/scalable with revenue, but not perfectly — worth investigating which cost components lag behind revenue changes.
+- 2015 was the strongest year, generating both the highest revenue ($3.2M) and profit ($6.3M).
+- In 2014, profit increased but profit margin decreased, suggesting costs were growing faster than revenue.
+- Revenue continued to grow in 2015 before declining by 9.48% in 2016.
+- Although costs also decreased in 2016, they did not fall enough to fully offset the revenue decline, leading to a slight margin reduction.
+- This suggests that most costs move with revenue, but some expenses may not scale down efficiently and should be investigated further.
 
 **Product performance**
-- 4 products (Halloween Zombie Mask variants) combine high sales volume with **negative profit margin (-5.56%)** — a direct cost/pricing issue worth flagging to management, not just a reporting footnote
-- One product (Animal Big Feet Slippers, size M) shows high margin (75%) but very low volume (rank 188) — a clear candidate for a marketing push
-- No single SKU dominates profit share — the product base is reasonably diversified, which limits single-product concentration risk
+- Four Halloween Zombie Mask products generated high sales volume but had negative profit margins (-5.56%), indicating potential pricing or cost issues.
+- Animal Big Feet Slippers (Size M) had a very high profit margin (75%) but low sales volume (rank 188), making it a strong candidate for additional marketing.
+- Profit contribution is spread across many products, reducing dependence on a single product line.
 
 **Sales team performance**
-- Highest-revenue rep also shows the *lowest* profit margin and The rep with the best profit margin ranks only 7th in total revenue — suggesting revenue is being won through discounting rather than deal quality
+- The salesperson with the highest revenue generated one of the lowest profit margins.
+- The salesperson with the highest profit margin ranked only seventh in revenue.
+
+This suggests some sales growth may be driven by heavy discounting rather than profitable deals.
 
 **Customer data quality finding**
-- ~34% of revenue is associated with unidentified customers (Customer Key 0). Investigation confirmed these are real transactions with complete order data (product, quantity, date) but no customer record captured — reframing this from "customer concentration risk" to a **process/data-capture gap** worth its own recommendation (e.g., enforcing customer capture at point of sale).
+- Around 34% of total revenue came from transactions linked to unknown customers.
+- Analysis confirmed these transactions were legitimate sales with complete order information, but customer details were not captured.
+
+This points to a process issue rather than a reporting issue and highlights an opportunity to improve customer data collection.
+
+- Only 13 transactions (0.05% of records) were missing delivery dates.
+- These were likely orders created near the end of the dataset period and had not yet been shipped.
+- They were excluded from delivery-time analysis but included in all revenue and profit calculations.
 
 **Geographic performance**
-- California leads all states in both revenue and profit while Hawaii is the lowest
+- California generated the highest revenue and profit.
+- Hawaii recorded the lowest revenue and profit.
 
-**Chilled items**
+**Chilled items Analysis**
 - Total number of invoices is 8k
-- Total sales coming from chilled items is 129k which is 0.6% of total sales
-- Taj shand has the highest % of total sold chilled items which is 0.9%
-- California is the highest state for chilled items sales with $50,786 , and Hawaii is the lowest at $1,436 sales.
+- Chilled items contributed approximately $129K in sales, representing only 0.6% of total sales.
+- Taj Shand had the highest share of chilled item sales at 0.9%.
+- California recorded the highest chilled-item sales ($50,786), while Hawaii recorded the lowest ($1,436).
 
 **Note**
 
 13 transactions (0.05% of records) have no recorded delivery date, consistent with orders invoiced near the end of the dataset's time range that had not yet shipped. These are excluded from delivery-time slicers but retained in all revenue/profit calculations. 
 
 ## 6. Recommendations
-1. Investigate the root cause of negative margins on the Halloween Zombie Mask line — pricing or cost issue
-2. Increase marketing spend behind high-margin, low-volume products identified in the Pareto analysis
-3. Review sales incentive structure — consider weighting compensation toward margin/profit, not revenue alone
-4. Address the customer-identification gap at point of sale to convert the ~34% "unknown" revenue into actionable customer-level data
+- Review pricing and cost structure for the Halloween Zombie Mask product line.
+- Increase marketing efforts for high-margin products with low sales volume.
+- Adjust sales incentives to reward profitability in addition to revenue generation.
+- Improve customer information capture during the sales process to reduce unidentified transactions and enable better customer analysis.
 
 ## 7. Tools & skills demonstrated
 
 - **Power Query** — data cleaning, header correction, handling placeholder/null records
-- **Data modeling** — star schema design, relationship cardinality
-- **DAX** — CALCULATE and context transition, time intelligence (YoY/MoM), iterator functions (AVERAGEX/SUMX) for re-aggregating from line-item to order grain, ALL() for percentage-of-total calculations
-- **Business analysis** — translating raw metrics into decision-relevant findings rather than descriptive reporting
-- **Data quality judgment** — identifying and correctly reframing a placeholder/unknown-member trap in the customer dimension rather than either deleting it or misreporting it
+- **Data modeling** — star schema design, Relationship management
+- **DAX** — CALCULATE and context transition, time intelligence (YoY), iterator functions (AVERAGEX) for re-aggregating from line-item to order grain, ALL() for percentage-of-total calculations
+- **Business analysis** — Turning data into actionable business recommendations and identifying performance drivers and profitability issues
+- **Data quality judgment** — Investigating missing and placeholder records and distinguishing real business issues from data-modeling issues
 
 ---
 
