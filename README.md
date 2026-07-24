@@ -42,6 +42,8 @@ Management wanted a clear view of the business and answers to questions such as:
 - Removed invalid header rows from DimCustomer and DimStockItem
 - Removed the null placeholder row (Stock Item Key 0) with no valid attributes
 - Investigated sales records linked to Customer Key 0 and confirmed they were valid transactions with missing customer details rather than data model issues.
+
+![Image Alt](https://github.com/mohmadahmedabdelwahed/Wide-World-Importers-Sales-Performance-Analysis/blob/main/Pictures/11.%20Data%20model.png)
 ---
 
 ## 4. KPIs measured
