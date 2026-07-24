@@ -69,6 +69,16 @@ Management needed a single source of truth to answer:
 **Geographic performance**
 - California leads all states in both revenue and profit while Hawaii is the lowest
 
+**Chilled items**
+- Total number of invoices is 8k
+- Total sales coming from chilled items is 129k which is 0.6% of total sales
+- Taj shand has the highest % of total sold chilled items which is 0.9%
+- California is the highest state for chilled items sales with $50,786 , and Hawaii is the lowest at $1,436 sales.
+
+**Note**
+
+13 transactions (0.05% of records) have no recorded delivery date, consistent with orders invoiced near the end of the dataset's time range that had not yet shipped. These are excluded from delivery-time slicers but retained in all revenue/profit calculations. 
+
 ## 6. Recommendations
 1. Investigate the root cause of negative margins on the Halloween Zombie Mask line — pricing or cost issue
 2. Increase marketing spend behind high-margin, low-volume products identified in the Pareto analysis
