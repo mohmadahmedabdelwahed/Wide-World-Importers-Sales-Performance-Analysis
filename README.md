@@ -20,8 +20,8 @@ Management needed a single source of truth to answer:
 | Table | Role | Rows (approx.) |
 |---|---|---|
 | FactSale | Fact table — line-item sales transactions | ~26,000 |
-| DimCustomer | Customer dimension (SCD Type 2) | ~400 |
-| DimStockItem | Product dimension (SCD Type 2) | ~670 |
+| DimCustomer | Customer dimension | ~400 |
+| DimStockItem | Product dimension | ~670 |
 | DimEmployee | Salesperson dimension | ~210 |
 | DimCity | Geography (city, state, territory) | ~13,000 |
 | DimDate | Calendar table (calendar + fiscal) | 1,460 |
@@ -87,7 +87,7 @@ Management needed a single source of truth to answer:
 ## 7. Tools & skills demonstrated
 
 - **Power Query** — data cleaning, header correction, handling placeholder/null records
-- **Data modeling** — star schema design, relationship cardinality, SCD Type 2 awareness
+- **Data modeling** — star schema design, relationship cardinality
 - **DAX** — CALCULATE and context transition, time intelligence (YoY/MoM), iterator functions (AVERAGEX/SUMX) for re-aggregating from line-item to order grain, ALL() for percentage-of-total calculations
 - **Business analysis** — translating raw metrics into decision-relevant findings rather than descriptive reporting
 - **Data quality judgment** — identifying and correctly reframing a placeholder/unknown-member trap in the customer dimension rather than either deleting it or misreporting it
