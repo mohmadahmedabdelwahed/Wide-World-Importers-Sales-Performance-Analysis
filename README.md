@@ -40,7 +40,7 @@ Management needed a single source of truth to answer:
 | Total Revenue | Sum of Total Excluding Tax |
 | Total Profit | Sum of Profit |
 | Profit Margin % | Profit ÷ Revenue |
-| Revenue / Profit YoY %  / Profit Margin % | Same-period comparison vs. prior year |
+| Revenue / Profit / Cost / Profit Margin YoY %  / Profit Margin % | Same-period comparison vs. prior year |
 | Average Order Value (AOV) | Revenue per distinct invoice |
 | Average Profit per Order | Profit per distinct invoice |
 | Average Deal Size per Salesperson | Order-level revenue average, calculated per rep |
@@ -50,10 +50,10 @@ Management needed a single source of truth to answer:
 **Profitability trend**
 - 2015 was the peak year for both revenue ($3.2M) and profit ($6.3M)
 - 2014 showed Profit increasing while margin declined — a warning sign later corrected in 2015–2016
-- Q1 and June consistently show the strongest margins; Q4 and August the weakest
-- Growth is decreasing, but margin has stabilized (2016) Revenue grew 13.93% YoY and profit grew 13.96% YoY in 2016 — both slower than prior-year growth rates (2014–2015), indicating decelerating growth, worth investigating (market saturation, competition, fewer new customers acquired)
-- Profit Margin YoY moved only +0.03 percentage points — effectively flat, not a meaningful increase. The more accurate read: margin held steady despite slowing growth
-- This is a positive contrast to 2014, where revenue grew while margin eroded (see above). By 2016, revenue and profit are growing in lockstep again — the company avoided a repeat of the 2014 pattern, even as top-line growth itself slowed down
+
+**Profitability trend**
+
+- Revenue grew steadily in 2014-2015 before contracting -9.48% in 2016 — the first decline in the dataset. Margin eroded in 2014 (cost growth outpaced revenue growth), stabilized in 2015, then eroded again modestly in 2016 (-0.44pts) as cost reduction (-9.06%) nearly but not fully matched the revenue decline. This suggests the cost base is largely variable/scalable with revenue, but not perfectly — worth investigating which cost components lag behind revenue changes.
 
 **Product performance**
 - 4 products (Halloween Zombie Mask variants) combine high sales volume with **negative profit margin (-5.56%)** — a direct cost/pricing issue worth flagging to management, not just a reporting footnote
