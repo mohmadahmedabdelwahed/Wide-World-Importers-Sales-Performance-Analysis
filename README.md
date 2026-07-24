@@ -4,8 +4,7 @@
 
 ## 1. Project overview
 A end-to-end Power BI analysis of Wide World Importers' sales data (2013–2016), built to answer a core business question: **is the company growing profitably, or is revenue growth masking margin erosion?**
-
-### The project covers data modeling from raw star-schema tables, Power Query cleaning, DAX measure design, and a 9-page interactive report spanning company performance, product profitability, customer concentration, sales team accountability, and geographic performance.
+The project covers data modeling from raw star-schema tables, Power Query cleaning, DAX measure design, and a 9-page interactive report spanning company performance, product profitability, customer concentration, sales team accountability, and geographic performance.
 ---
 
 ## 2. Business problem
