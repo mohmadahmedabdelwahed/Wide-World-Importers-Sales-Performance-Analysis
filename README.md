@@ -40,7 +40,7 @@ Management needed a single source of truth to answer:
 | Total Revenue | Sum of Total Excluding Tax |
 | Total Profit | Sum of Profit |
 | Profit Margin % | Profit ÷ Revenue |
-| Revenue / Profit / Cost / Profit Margin YoY %  / Profit Margin % | Same-period comparison vs. prior year |
+| Revenue / Profit / Cost / Profit Margin YoY % | Same-period comparison vs. prior year |
 | Average Order Value (AOV) | Revenue per distinct invoice |
 | Average Profit per Order | Profit per distinct invoice |
 | Average Deal Size per Salesperson | Order-level revenue average, calculated per rep |
