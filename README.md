@@ -49,9 +49,6 @@ Management needed a single source of truth to answer:
 **Profitability trend**
 - 2015 was the peak year for both revenue ($3.2M) and profit ($6.3M)
 - 2014 showed Profit increasing while margin declined — a warning sign later corrected in 2015–2016
-
-**Profitability trend**
-
 - Revenue grew steadily in 2014-2015 before contracting -9.48% in 2016 — the first decline in the dataset. Margin eroded in 2014 (cost growth outpaced revenue growth), stabilized in 2015, then eroded again modestly in 2016 (-0.44pts) as cost reduction (-9.06%) nearly but not fully matched the revenue decline. This suggests the cost base is largely variable/scalable with revenue, but not perfectly — worth investigating which cost components lag behind revenue changes.
 
 **Product performance**
